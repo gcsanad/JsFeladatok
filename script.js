@@ -33,6 +33,7 @@ let showContact = function(contacts, i) {
 }
 */
 
+
 let showContact = (lista, index) => (lista instanceof Array) ? lista[index] : "szutyerák";
 console.log(showContact(contacts,2))
 
@@ -45,6 +46,7 @@ let showAllContacts = function(contacts) {
     }
 }
 */
+console.log('-'*50)
 let showAllContacts = (lista) => (lista instanceof Array) ? lista : "tututtututut"
 console.log(showAllContacts(contacts))
 
@@ -59,7 +61,35 @@ let addNewContact = function(contacts, name, phone, email) {
     }
 }
 */
+console.log('-'*50)
 let addNewContact = (lista, nev, telefon, email) => (lista instanceof Array) ? lista.push({"name": nev, "phone": telefon, "email": email }) : undefined;
 console.log(addNewContact(contacts, "Márton", "nincs", "azsincs"))
-console.log(contacts)
+
+console.log('-'*50)
+console.log("LAB function 2")
+let miSzerint= "email";
+/*
+do{
+    miSzerint = prompt("Mi szerint rendezzük?");
+}while(miSzerint == null || miSzerint == "name" || miSzerint == "phone" || miSzerint == "email");
+*/
+/*
+let emailSzerint = contacts.sort((a,b) => (a[email] < b[email]) ? -1 :(a[email]>b[email])? 1 : 0)
+let nevSzerint = contacts.sort((a,b) => (a[name] < b[name]) ? -1 : (a[name]>b[name])? 1 : 0)
+let telefonSzerint = contacts.sort((a,b) => (a[phone] < b[phone]) ? -1 : (a[phone]>b[phone])? 1 : 0)
+*/
+let sorbaRendez = contacts.sort((a,b) => (a[miSzerint] < b[miSzerint]) ? -1 : (a[miSzerint]>b[miSzerint])? 1 : 0)
+console.log(sorbaRendez)
+/*
+if (miSzerint == "name") {
+    console.log(nevSzerint)
+}
+else if (miSzerint == "phone") {
+    console.log(telefonSzerint)
+}
+else if (miSzerint == "email") {
+    console.log(emailSzerint)
+}
+*/
+
 
